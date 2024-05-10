@@ -1,5 +1,18 @@
-#ifndef MINI_TALK_H
-# define MINI_TALK_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/10 18:47:53 by ael-krid          #+#    #+#             */
+/*   Updated: 2024/05/10 18:47:59 by ael-krid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef MINI_TALK
+# define MINI_TALK
+
 # include <limits.h>
 # include <signal.h>
 # include <stdlib.h>

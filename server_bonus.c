@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/10 18:47:43 by ael-krid          #+#    #+#             */
+/*   Updated: 2024/05/10 18:47:45 by ael-krid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "minitalk.h"
 
 int		msg_allocated;
@@ -57,7 +70,7 @@ void	signal_handler(int sig_num, siginfo_t *info, void *vp)
 
 int	main(void)
 {
-	struct sigaction sa;
+	struct sigaction	sa;
 
 	write(1, "[!] PID: ", 9);
 	put_pid(getpid());
