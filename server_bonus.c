@@ -9,11 +9,9 @@
 /*   Updated: 2024/05/10 18:47:45 by ael-krid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 #include "minitalk.h"
 
-int		msg_allocated;
+int		g_msg_allocated;
 
 void	put_pid(pid_t pid)
 {
@@ -31,9 +29,9 @@ void	face_the_speaker(siginfo_t *info, pid_t *c_pid, int *i, char *msg)
 	{
 		*c_pid = info->si_pid;
 		*i = 0;
-		if (msg_allocated != 0)
+		if (g_msg_allocated != 0)
 		{
-			msg_allocated = 0;
+			g_msg_allocated = 0;
 			free(msg);
 		}
 	}
@@ -47,9 +45,9 @@ void	signal_handler(int sig_num, siginfo_t *info, void *vp)
 	static char				*msg;
 
 	face_the_speaker(info, &client_pid, &i, msg);
-	if (msg_allocated == 0)
+	if (g_msg_allocated == 0)
 	{
-		msg = catch_size_and_alloc(sig_num, &i, &msg_allocated);
+		msg = catch_size_and_alloc(sig_num, &i, &g_msg_allocated);
 		return ;
 	}
 	(void)vp;
@@ -63,7 +61,7 @@ void	signal_handler(int sig_num, siginfo_t *info, void *vp)
 	if (i == 0)
 	{
 		add_char(c, &msg);
-		if (--msg_allocated == 0)
+		if (--g_msg_allocated == 0)
 			print_msg_and_free(msg, info, 1);
 	}
 }

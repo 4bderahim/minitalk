@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINI_TALK
-# define MINI_TALK
+#ifndef MINITALK_H
+# define MINITALK_H
 
 # include <limits.h>
 # include <signal.h>
