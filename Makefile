@@ -21,7 +21,6 @@ $(SERVER_PROG) : $(SERVER_OBJ)
 $(CLIENT_PROG) : $(CLIENT_C:.c=.o) 
 	@$(CC) $(CFLAGS) $^ -o $@
 
-
 $(BSERVER_PROG) : $(BSERVER_OBJ) 
 	@$(CC) $(CFLAGS) $^ -o $@
 $(BCLIENT_PROG) : $(BCLIENT_C:.c=.o) 
