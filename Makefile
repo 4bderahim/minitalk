@@ -1,13 +1,13 @@
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
-SEREVR_C = mini_utils.c talk_utils.c server.c
-SERVER_OBJ = $(SEREVR_C:.c=.o)
+SERVER_C = mini_utils.c talk_utils.c server.c
+SERVER_OBJ = $(SERVER_C:.c=.o)
 CLIENT_C = client.c
 SERVER_PROG = server
 CLIENT_PROG = client
 
 BSERVER_C = mini_utils.c talk_utils.c server_bonus.c
-BSERVER_OBJ = $(SEREVR_C:.c=.o)
+BSERVER_OBJ = $(BSERVER_C:.c=.o)
 BCLIENT_C = mini_utils.c client_bonus.c
 BSERVER_PROG = server_bonus
 BCLIENT_PROG = client_bonus
@@ -16,7 +16,7 @@ all : $(SERVER_PROG) $(CLIENT_PROG)
 bonus: $(BSERVER_PROG) $(BCLIENT_PROG)
 
 
-$(SERVER_PROG) : $(BSERVER_OBJ) 
+$(SERVER_PROG) : $(SERVER_OBJ) 
 	@$(CC)  $(CFLAGS) $^ -o $@
 $(CLIENT_PROG) : $(CLIENT_C:.c=.o) 
 	@$(CC) $(CFLAGS) $^ -o $@
