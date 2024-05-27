@@ -14,3 +14,6 @@ then print it.
 but before that.<br/>
 i used the same technique to send the number of character in the whole msg ,, that number is reveived by the server using the same method to alloc an enough space in memory to store the whole msg after receiving it bit by bit.
 > is the bonus part the server send a msg to tell the client that msg is successfully recieved.
+<br/>
+<br/>
+<img width="1356" alt="Screen Shot 2024-05-27 at 6 42 39 PM" src="https://github.com/4bderahim/minitalk/assets/88629357/373293b4-23f3-4bc1-880c-9c40e76dbd31">
