@@ -2,14 +2,14 @@
 
 **this project is all about interproccess communication,,
 the task is to make two processes communicate to each other using signals (only SIGUSR1 & SIGUSR2)
-lets call them server and clien, so the server should be able to receive messages from the client  or multiple clients.
-to do so all i did is whenever i want to send a msg to the server i break that msg down to bits each bit a either  SIGUSR1 OR SIGUSR2 
+lets call them server and client, so the server should be able to receive messages from the client  or multiple clients.
+to do so all i did is whenever i want to send a msg to the server i break that msg down to bits each bit is either  SIGUSR1 OR SIGUSR2 
 for example :**
 <br/>
 SIGUSR1 would be 0;
 SIGUSR2 would be 1;
 
-**on the other side the server then receive each signal ,, and based on which it  convertes the signale to 1 or 0 to complete a byte (8 bits (8 signals)).
+**on the other side the server then receives each signal ,, and based on which it  convertes the signale to 1 or 0 to complete a byte (8 bits (8 signals)).
 then print it.**
 
 ***but before that.<br/>***
